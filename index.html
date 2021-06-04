@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Gradie</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <main id="content" class="layout__sign-up" role="main">
+      <div class="preview theme__dark">
+        <h1>Gradie</h1>
+
+        <p>Beautiful gradients in seconds.</p>
+        
+        <!-- <picture>
+          <source srcset="assets/img/iphone-mockup.avif" type="image/avif">
+          <source srcset="assets/img/iphone-mockup.webp" type="image/webp">
+          <img class="iphone" alt="" src="assets/img/iphone-mockup.png" width="408" height="508">
+        </picture> -->
+      </div>
+
+      <div class="sign-up__form theme__light">
+        <h2>Login</h2>
+
+        <form class="" method="POST" action="">
+          <label for="email">Email *</label>
+          <input type="email" inputmode="email" class="input" autocomplete="email" required>
+
+          <label for="password">Password *</label>
+          <input type="password" class="input" minlength="8" required>
+
+          <label class="checkbox">
+            <span class="checkbox__input">
+              <input type="checkbox" name="checkbox" />
+              <span class="checkbox__control">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    d="M1.73 12.91l6.37 6.37L22.79 4.59"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span class="checkbox__label">By creating an account you agree to the <a href="#">Terms & Conditions</a>.</span>
+          </label>
+
+          <button type="submit" class="button button__primary">
+            Create an Account
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

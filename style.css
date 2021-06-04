@@ -1,0 +1,351 @@
+/* CONTENTS ============================= *\
+ *  #FONTS
+ *  #VARIABLES
+ *  #BASE
+ *  #ACCESSIBILITY
+ *  #UTILITIES
+ *  #LAYOUT
+ *  #COMPONENTS
+ *  #THEMES
+\* ====================================== */
+
+/* #FONTS =============================== */
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/roboto-v27-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('assets/fonts/roboto-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('assets/fonts/roboto-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('assets/fonts/roboto-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('assets/fonts/roboto-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('assets/fonts/roboto-v27-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/roboto-v27-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('assets/fonts/roboto-v27-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('assets/fonts/roboto-v27-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('assets/fonts/roboto-v27-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('assets/fonts/roboto-v27-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('assets/fonts/roboto-v27-latin-italic.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/roboto-v27-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('assets/fonts/roboto-v27-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('assets/fonts/roboto-v27-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('assets/fonts/roboto-v27-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('assets/fonts/roboto-v27-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('assets/fonts/roboto-v27-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-700italic - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/roboto-v27-latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('assets/fonts/roboto-v27-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('assets/fonts/roboto-v27-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('assets/fonts/roboto-v27-latin-700italic.woff') format('woff'), /* Modern Browsers */
+       url('assets/fonts/roboto-v27-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('assets/fonts/roboto-v27-latin-700italic.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+
+
+
+
+/* #VARIABLES =========================================== */
+:root {
+  --color__white: #fff;
+  --color__teal: #013243;
+  --color__blue: #3f7486;
+  --color__dark: #000;
+  --color__grey: #888;
+
+  --focus__ring: 0 0 0 5px;
+
+  --font__stack: 'Roboto', 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --leading__body: 1.618;
+  --leading__heading: 1.2;
+
+  --m__center: auto;
+
+  --text__base: 16px;
+  --text__preset-1: 2.488rem;
+  --text__preset-2: 2.074rem;
+  --text__preset-3: 1.728rem;
+  --text__preset-4: 1.44rem;
+  --text__preset-5: 1.2rem;
+  --text__preset-6: 1rem;
+
+  --width__wide: 75rem;
+}
+
+/* #BASE ================================================ */
+*, *::after, *::before {box-sizing: border-box;}
+
+html {font-size: var(--text__base);}
+
+body {
+  background: url(assets/img/bg-gradient.jpg) var(--color__white) no-repeat;
+  color: var(--color__dark);
+  font-family: var(--font__stack);
+  font-size: var(--text__preset-6);
+  line-height: var(--leading__body);
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+a:not([class]) {text-decoration-skip: auto;}
+  a:hover, a:focus {text-decoration: none;}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: var(--leading__heading);
+  margin: 0 0 1.25rem 0;
+}
+
+h1 {font-size: var(--text__preset-1);}
+h2 {font-size: var(--text__preset-2);}
+h3 {font-size: var(--text__preset-3);}
+h4 {font-size: var(--text__preset-4);}
+h5 {font-size: var(--text__preset-5);}
+h6 {font-size: var(--text__preset-6);}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input {font: inherit;}
+
+label {
+  font-weight: bold;
+  margin: 0 0 .625rem 0;
+}
+
+p {
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-zone: 8%;
+  -moz-hyphens: auto;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-zone: 8%;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-zone: 8%;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+  margin: 0 0 1.25rem 0;
+}
+
+svg {fill: currentColor;}
+
+
+
+
+
+/* #ACCESSIBILITY ================================== */
+*:focus {
+  outline-style: solid;
+  outline-color: transparent;
+}
+
+.link__skip {
+  height: 2.75rem;
+  left: 50%;
+  padding: 1rem;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform .3s;
+ }
+  .link__skip:focus {transform: translateY(0);}
+
+.sr__only {
+  clip: rect(1px,1px,1px,1px);
+  position: absolute!important;
+}
+
+
+
+
+
+/* #COMPONENTS ==================================== */
+
+/* #BUTTON ---------------------------------------- */
+a.button {text-decoration: none;}
+
+button.button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
+a.button,
+button.button {
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .25em .75em;
+  min-width: 10ch;
+  min-height: 44px;
+  font-size: var(--text__preset-6);
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.1;
+  transition: 220ms all ease-in-out;
+}
+
+.button.button__primary {
+  background-color: var(--color__teal);
+  color: var(--color__white);
+}
+  .button__primary:hover, .button__primary:focus {
+    background-color: var(--color__dark);
+    color: var(--color__white);
+  }
+
+
+
+
+
+/* #INPUTS ------------------------------------------ */
+.checkbox {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: .5em;
+  font-size: var(--text__preset-6);
+}
+  .checkbox__input {
+    display: grid;
+    grid-template-areas: "checkbox";
+  }
+    .checkbox__input > * {grid-area: checkbox;}
+
+    .checkbox__input input {
+      opacity: 0;
+      width: 1em;
+      height: 1em;
+    }
+      .checkbox__control {
+        display: inline-grid;
+        width: 1em;
+        height: 1em;
+        border-radius: .25em;
+        border: .1em solid currentColor;
+      }
+        .checkbox__control svg {
+          transition: transform .1s ease-in 25ms;
+          transform: scale(0);
+          transform-origin: bottom left;
+        }
+        .checkbox__input input:checked + .checkbox__control svg {
+          transform: scale(1);
+        }
+
+.input {
+  font-size: var(--text__preset-6);
+  padding: .25em .5em;
+  background-color: var(--color__white);
+  border: 2px solid var(--color__grey);
+  border-radius: 5px;
+  transition: 180ms all ease-in-out;
+}
+
+.input:not(textarea),
+.input:not([type=checkbox]) {
+  line-height: 1;
+  height: 2.75rem;
+}
+
+
+
+
+
+/* #LAYOUTS ================================================= */
+.layout__sign-up {
+  display: grid;
+  grid-gap: 0;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 4rem;
+  max-width: var(--width__wide);
+  margin: var(--m__center);
+}
+  .layout__sign-up .preview {
+    border-radius: 10px 0 0 10px;
+    padding: 4rem 4rem 0 4rem;
+    text-align: center;
+    background-image: url(assets/img/iphone-mockup.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+  }
+
+  .sign-up__form {
+    border-radius: 0 10px 10px 0;
+    border-top: 2px solid var(--color__grey);
+    border-right: 2px solid var(--color__grey);
+    border-bottom: 2px solid var(--color__grey);
+    padding: 4rem;
+  }
+    .sign-up__form form {
+      display: flex;
+      flex-direction: column;
+    }
+      .sign-up__form .input {margin: 0 0 1.25rem 0;}
+
+
+
+
+
+/* #THEMES ================================================== */
+.theme__dark {
+  background-color: var(--color__teal);
+  color: var(--color__white);
+}
+
+.theme__light {
+  background-color: var(--color__white);
+  color: var(--color__dark);
+}
+  .theme__light a:not(.button) {color: var(--color__teal);}
