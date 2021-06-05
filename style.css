@@ -111,6 +111,8 @@ body {
   background: url(assets/img/bg-gradient.jpg) var(--color__white) no-repeat;
   background-size: cover;
   color: var(--color__dark);
+  display: flex;
+  justify-content: center;
   font-family: var(--font__stack);
   font-size: var(--text__preset-6);
   line-height: var(--leading__body);
