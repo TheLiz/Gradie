@@ -78,9 +78,9 @@
 :root {
   --color__white: #fff;
   --color__teal: #013243;
+  --color__ice: #8FC3D6;
   --color__dark: #000;
   --color__grey: #888;
-  --color__sheer-white: rgba(255,255,255,.8);
 
   --focus__ring: 0 0 0 5px;
 
@@ -109,6 +109,7 @@ html {font-size: var(--text__base);}
 
 body {
   background: url(assets/img/bg-gradient.jpg) var(--color__white) no-repeat;
+  background-size: cover;
   color: var(--color__dark);
   font-family: var(--font__stack);
   font-size: var(--text__preset-6);
@@ -244,6 +245,8 @@ button.button {
     color: var(--color__white);
   }
 
+  .button__primary:focus {box-shadow: var(--focus__ring) var(--color__grey);}
+
 
 
 
@@ -271,7 +274,8 @@ button.button {
         width: 1em;
         height: 1em;
         border-radius: .25em;
-        border: .1em solid currentColor;
+        border: 2px solid var(--color__grey);
+        transform: translateY(.25em);
       }
         .checkbox__control svg {
           transition: transform .1s ease-in 25ms;
@@ -282,6 +286,15 @@ button.button {
           transform: scale(1);
         }
 
+        .checkbox__label {
+          opacity: .8;
+          transition: 180ms all ease-in-out;
+        }
+
+    .checkbox__input input:focus + .checkbox__control {
+      box-shadow: var(--focus__ring) var(--color__teal);
+    }
+
 .input {
   font-size: var(--text__preset-6);
   padding: .25em .5em;
@@ -290,6 +303,10 @@ button.button {
   border-radius: 5px;
   transition: 180ms all ease-in-out;
 }
+  .input:focus {
+    box-shadow: var(--focus__ring) var(--color__teal);
+    outline: 2px solid transparent;
+  }
 
 .input:not(textarea),
 .input:not([type=checkbox]) {
@@ -312,7 +329,7 @@ button.button {
   margin: var(--m__center);
 }
   .layout__sign-up .preview {
-    border-radius: 10px 0 0 10px;
+    border-radius: .625rem 0 0 .625rem;
     padding: 4rem 4rem 0 4rem;
     text-align: center;
     background-image: url(assets/img/iphone-mockup.png);
@@ -334,12 +351,51 @@ button.button {
     }
       .sign-up__form .input {margin: 0 0 1.25rem 0;}
 
+      .sign-up__form .button {margin: 1.25rem 0 0 0;}
+
 @media (max-width: 64rem) {
-  .layout__sign-up {
-    grid-template-columns: 1fr;
+  a.button, button.button {
+    font-size: var(--text__preset-5);
+    padding: 1.25em .25em;
   }
 
-  .layout__sign-up .preview {}
+  .input:not(textarea),
+  .input:not([type=checkbox]) {
+    height: 3.25rem;
+  }
+
+  .checkbox {font-size: var(--text__preset-5);}
+
+  .layout__sign-up {
+    grid-template-columns: 1fr;
+    max-width: 37.5rem;
+    margin: var(--m__center);
+  }
+
+  .layout__sign-up .preview {
+    border-radius: .625rem .625rem 0 0;
+    min-height: 37.5rem;
+  }
+
+  .layout__sign-up .sign-up__form {
+    border: 2px solid var(--color__grey);
+    border-radius: 0 0 .625rem .625rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  body {background-image: none;}
+
+  .layout__sign-up {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .layout__sign-up .preview,
+  .layout__sign-up .sign-up__form {border-radius: 0;}
+
+  .layout__sign-up .sign-up__form {border: none;}
 }
 
 
@@ -348,9 +404,9 @@ button.button {
 /* #THEMES ================================================== */
 .theme__dark {
   background-color: var(--color__teal);
-  color: var(--color__white);
+  color: var(--color__ice);
 }
-  .theme__dark p {color: var(--color__sheer-white);}
+  .theme__dark h1 {color: var(--color__white);}
 
 .theme__light {
   background-color: var(--color__white);
