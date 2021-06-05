@@ -1,31 +1,8 @@
 
-# Welcome to Codewell! 👋
+# Codewell Challenge: Gradie
 
-Codewell's aim is to provide you with real-world design templates that you can use to practice your HTML and CSS projects. 
+From Codewell: Gradie is a simple sign up page, great to practice centering layouts and absolute positioning.
 
-Free or paid, all templates are high quality and will make great portfolio pieces.
+I used a mix of flexbox and grid to put this together. I also deviated a bit to make things more accessible. Darker borders, lack of placeholder text in form fields. 
 
-### I've completed the challenge, now what?
-
-We recommend using one of these two websites to deploy your projects
-
-- [GitHub Pages](https://pages.github.com/)
-- [Netlify](https://www.netlify.com/)
-
-They're super easy to setup and you should have your website up and running in no time, just follow their instructions.
-
-
-### Submit your solution to Codewell
-
-Visit the relevant challenge on [Codewell](https://codewell.cc) and click on 'Submit Solution' right under the challenge.
-Enter all the title, Github repo URL, Live URL (Netlify or GH Pages), and tell the community what challenges you've faced.
-
-### Join our community on Slack
-
-If you want more real-time communication, you can visit our community on [Slack](https://join.slack.com/t/codewell-hq/shared_invite/zt-ni8c9g8h-gNYWrmqQ3Uh37dcLg9~LMQ). 
-
-### Fonts Used
-
-https://fonts.google.com/specimen/Roboto
-
-
+I think they expected you to position the phone image absolutely, but for this use case it seemed more straight-forward to set it as a background image and position it to the bottom center of the container. The image is pretty small compressed, so I don't feel it's a huge performance issue to go about it this way. Ditto for the gradient background which was provided as an image.
