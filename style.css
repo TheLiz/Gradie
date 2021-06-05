@@ -78,9 +78,9 @@
 :root {
   --color__white: #fff;
   --color__teal: #013243;
-  --color__blue: #3f7486;
   --color__dark: #000;
   --color__grey: #888;
+  --color__sheer-white: rgba(255,255,255,.8);
 
   --focus__ring: 0 0 0 5px;
 
@@ -334,6 +334,13 @@ button.button {
     }
       .sign-up__form .input {margin: 0 0 1.25rem 0;}
 
+@media (max-width: 64rem) {
+  .layout__sign-up {
+    grid-template-columns: 1fr;
+  }
+
+  .layout__sign-up .preview {}
+}
 
 
 
@@ -343,6 +350,7 @@ button.button {
   background-color: var(--color__teal);
   color: var(--color__white);
 }
+  .theme__dark p {color: var(--color__sheer-white);}
 
 .theme__light {
   background-color: var(--color__white);
